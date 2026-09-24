@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CodeGuard AI — AI Code Review & Release-Risk Assistant</title>
+  <meta name="description" content="Automated PR code review combining Semgrep SAST, Gemini 3.8 Flash, deterministic risk scoring, and n8n email automation.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/src/styles/index.css">
+  <link rel="stylesheet" href="/src/styles/components.css">
+  <link rel="stylesheet" href="/src/styles/diff.css">
+</head>
+<body class="theme-dark">
+  <div class="ambient-glow glow-1"></div>
+  <div class="ambient-glow glow-2"></div>
+  
+  <div id="app" class="app-layout">
+    <!-- Header rendered here -->
+    <header id="header-container"></header>
+
+    <!-- Main Content -->
+    <main class="main-container">
+      <!-- Hero / PR Input Section -->
+      <section id="hero-section" class="hero-section"></section>
+
+      <!-- Active Review Dashboard (Hidden until analyzed or loaded) -->
+      <section id="dashboard-section" class="dashboard-section hidden"></section>
+    </main>
+
+    <!-- History Drawer -->
+    <aside id="history-drawer" class="history-drawer hidden" aria-hidden="true"></aside>
+
+    <!-- Email Dispatch Modal -->
+    <div id="email-modal" class="modal-overlay hidden" role="dialog" aria-modal="true"></div>
+
+    <!-- Notification Toasts -->
+    <div id="toast-container" class="toast-container"></div>
+  </div>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
