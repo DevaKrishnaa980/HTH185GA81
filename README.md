@@ -1,8 +1,12 @@
-# pytest cache directory #
+# CodeGuard AI – Firebase Integration
 
-This directory contains data from the pytest's cache plugin,
-which provides the `--lf` and `--ff` options, as well as the `cache` fixture.
+This directory contains Firebase configuration, security rules, and Firestore index specifications.
 
-**Do not** commit this to version control.
-
-See [the docs](https://docs.pytest.org/en/stable/how-to/cache.html) for more information.
+## Planned Structure & Usage
+- **Firestore Collections**:
+  - `reviews`: Stores structured review reports, PR metadata, risk scores, score breakdowns, findings, and email dispatch status.
+- **Security Rules (`firestore.rules`)**: Enforces secure read/write rules ensuring PR audit data integrity.
+- **Service Account Credentials**:
+  - Placeholder for optional `serviceAccountKey.json` for elevated server-side Firestore operations.
+- **Local Fallback**:
+  - CodeGuard AI supports a seamless local JSON storage fallback when Firebase credentials are not yet provisioned.
